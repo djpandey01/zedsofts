@@ -1,0 +1,28 @@
+{% block nav %}
+
+        <li><a id="android-app-link" href="https://drive.google.com/file/d/0Bzg5GNU8odLkWDZUcjZjeXpMVW8/view?usp=sharing"> <img  src="{{ url_for('static', filename='img/downloadapk.png') }}" ></a></li>
+
+
+
+  <li   {% if request.endpoint == "index" %}
+
+          class="active"
+          {% endif %}
+        ><a href="{{ url_for('index') }}">HOME</a></li>
+    <li {% if request.endpoint == "about" %}
+
+          class="active"
+          {% endif %}
+            ><a href="{{ url_for('about') }}">ABOUT</a></li>
+    <li {% if request.endpoint == "services" %}
+
+          class="active"
+          {% endif %}
+        ><a href="{{ url_for('services') }}">SERVICES</a></li>
+    <li {% if request.endpoint == "contact" %}
+
+          class="active"
+          {% endif %}
+        ><a href="{{ url_for('contact') }}">CONTACT US</a></li>
+
+{% endblock %}
